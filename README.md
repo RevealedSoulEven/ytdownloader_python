@@ -20,7 +20,7 @@ Clone this repository to start using the YouTube Video Downloader Advanced:
 
 ```bash
 git clone https://github.com/RevealedSoulEven/ytdownloader_python.git
-cd your-repository-name
+cd ytdownloader_python
 ```
 
 ## Usage Instructions
@@ -35,7 +35,7 @@ To download content without CLI prompts, edit the `ytdadvanced.py` script direct
 - `use_res`: Set to `True` to use the specified resolution.
 - `playlist`: Set to `True` if downloading a playlist.
 - `playlist_link`: URL of the playlist to download (required if `playlist` is `True`).
-- `concurrent_fragment_downloads`: Number of fragments to download concurrently.
+- `concurrent_fragment_downloads`: Number of fragments to download concurrently. Increase if you have a very fast Internet connection.
 - `download_folder`: Set to `True` to download into a specific folder.
 - `downloadfolder`: Name of the folder where downloads will be saved.
 
@@ -74,3 +74,8 @@ This project is distributed under the GNU General Public License v3.0, which all
 ## Disclaimer
 
 This tool is for personal and educational use only. Please ensure you are authorized to download content from YouTube and adhere to YouTube's Terms of Service.
+
+## Credits
+
+- **Developer:** [Revealed SoulEven](https://github.com/RevealedSoulEven/)
+- **Library Used:** [yt_dlp](https://github.com/yt-dlp/yt-dlp) - A youtube-dl fork with additional features and fixes.
