@@ -5,12 +5,12 @@ import yt_dlp
 
 # Configuration options
 use_cli = False
-video_link = "https://youtu.be/cQM55aOrZCg" # only for non-cli
+video_link = "https://www.youtube.com/watch?v=NbyHNASFi6U" # only for non-cli
 download_choice = "video" # audio or video
 resolution = 720
 use_res = True
 playlist = True
-playlist_link = "https://youtube.com/playlist?list=PLqSU78XQTtlTKUVjg3ulOzcKIuGIB9QxL"
+playlist_link = "https://www.youtube.com/playlist?list=PL9bw4S5ePsEGx_-Jpy_xrC6JqIRCNYDZ9"
 concurrent_fragment_downloads = 30
 download_folder = True
 downloadfolder = "ytdown"
