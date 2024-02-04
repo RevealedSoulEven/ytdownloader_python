@@ -2,6 +2,31 @@ import yt_dlp
 import sys
 
 
+
+
+"""
+DEPRECATED: This script is no longer recommended for use and may not function as intended.
+Please use `ytdadvanced.py` for an updated and more feature-rich YouTube downloading experience.
+"""
+
+
+
+"""
+DEPRECATED: This script is no longer recommended for use and may not function as intended.
+Please use `ytdadvanced.py` for an updated and more feature-rich YouTube downloading experience.
+"""
+
+
+
+"""
+DEPRECATED: This script is no longer recommended for use and may not function as intended.
+Please use `ytdadvanced.py` for an updated and more feature-rich YouTube downloading experience.
+"""
+
+
+
+
+
 arguments = sys.argv
 webm = False if len(arguments) == 1 else True
 def print_formats_menu(video_info, audio_present, video_present):

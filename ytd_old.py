@@ -3,6 +3,31 @@ import sys
 
 
 
+
+"""
+DEPRECATED: This script is no longer recommended for use and may not function as intended.
+Please use `ytdadvanced.py` for an updated and more feature-rich YouTube downloading experience.
+"""
+
+
+
+"""
+DEPRECATED: This script is no longer recommended for use and may not function as intended.
+Please use `ytdadvanced.py` for an updated and more feature-rich YouTube downloading experience.
+"""
+
+
+
+"""
+DEPRECATED: This script is no longer recommended for use and may not function as intended.
+Please use `ytdadvanced.py` for an updated and more feature-rich YouTube downloading experience.
+"""
+
+
+
+
+
+
 webm = False
 
 def print_formats_menu(video_info, audio_present, video_present):
