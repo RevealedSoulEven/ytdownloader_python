@@ -79,7 +79,7 @@ def get_best_audio(video_info):
     #######
     title = video_info.get("title", "video")
     output_filen = title.replace(' ', '_')
-    output_filename = ''.join(char for char in output_filen if char.isalnum() or char in '~[]!@#$%^&*()_+/., ')
+    output_filename = ''.join(char for char in output_filen if char.isalnum() or char in '~[]!@#$%^&()_+., ')
     max_filename_length = 120 #max 127 by android
     output_filename = output_filename[:max_filename_length]
     return [audio_format, output_filename]
@@ -113,12 +113,20 @@ def download_video(video_info):
         # get video
         if isaudio == False and isvideo == True:
             if currext != "webm" and "(" not in format_name and "m3u8" in video_format.get("protocol","") and len(vcodec) < 15:
-                if format_h in format_height:
-                    index = format_height.index(format_h)
-                    format_height.pop(index)
-                    format_list.pop(index)
-                format_list.append(int(format_id))
-                format_height.append(format_h)
+                #if format_h in format_height:
+                    # added this to get only vp09 video codec
+                    #index = format_height.index(format_h)
+                    #format_height.pop(index)
+                    #format_list.pop(index)
+                #format_list.append(int(format_id))
+                #format_height.append(format_h)
+                
+                if format_h not in format_height:
+                    # using avc video codec to support online
+                    # platforms like whatsapp video sharing (fix)
+                    format_list.append(int(format_id))
+                    format_height.append(format_h)
+                    
                 tempuu = str(i)+"."
                 if not use_res:
                     print(f"{tempuu: <3}  {format_name: <28}   {currext}")
@@ -161,7 +169,8 @@ has_vids_in_playlist = False
 if playlist:
     ydl_opts = {
         'quiet': True,
-        'extract_flat': True
+        'extract_flat': True,
+        'flat-playlist': True
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         result = ydl.extract_info(playlist_link, download=False)
